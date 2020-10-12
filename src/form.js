@@ -1,5 +1,6 @@
 import {initLogin} from './login.js';
 import {initRegister} from './register.js';
+import "./assets/styles/style.scss";
 
 initLogin();
 initRegister();
