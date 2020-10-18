@@ -58,6 +58,8 @@ export function initLogin(){
             
             if (loginForm.elements['email'].value === item.email && 
                 loginForm.elements['password'].value === item.password){
+                localStorage.setItem('user', JSON.stringify(item));
+                window.location.hash = '/';
                 console.log(`User: ${item.name}`);
                 loginForm.reset();
                 setButtonDisabled();

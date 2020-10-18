@@ -1,4 +1,4 @@
-import {INVALID_CLASS} from './constants.js';
+import {INVALID_CLASS} from '../constants.js';
 
 export function initRegister(){
     const registerForm = document.forms['register'];
@@ -103,4 +103,3 @@ export function initRegister(){
         console.log(user);
     });  
 }
-

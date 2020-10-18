@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 
 module.exports = {
-  entry: "./src/form.js",
+  entry: "./src/index.js",
   devServer: {
     watchContentBase: true,
     hot: true,

@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(/src/assets/img/bg-image.jpg);
+    background-size: cover;
+}
+
+.container-clients {
+    width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+
+}
+
+.count {
+    padding: 50px 50px 10px;
+}
+
+.count-block {
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #06a94d;
+    width: 175px;
+}
+
+.man-block {
+    color: #DD0000;
+}
+
+.woman-block {
+    color:#187bcd;
+}
+
+.balance-block {
+    color: #06a94d;
+}
+
+.count-block__count {
+    margin-left: 10px;
+}
+
+.column-names {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 15px;
+    border: 2px solid #69965f;
+    border-radius: 10px;
+    list-style: none;
+    font-weight: 700;
+    background-color: #fff;
+}
+
+.column-names > div {
+    width: 198px;
+}
+
+.column-names > button {
+    display: none;
+}
+
+.button-delete {
+    width: 85px;
+    height: 32px;
+    font-size: 15px;
+    padding: 5px;
+    background-color: #DD0000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+}

@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-calendar {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 490px;
+}
+
+.calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    color: #fff;
+    background-color: #ff6f61;
+    border: 1px solid #fff;
+}
+
+.week-days {
+    background-color: #74C2E1;
+    color: #000;
+}
+
+.empty-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+}
