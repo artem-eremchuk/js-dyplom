@@ -29,55 +29,12 @@ const template = `
     </div>
 `;
 
-const users = [
-    {
-        name: 'Artem',
-        company: 'Google',
-        email: 'artem@gmail.com',
-        phone: '+375292929292',
-        balance: '$7,313',
-        isActive: false,
-        gender: 'female',
-    },
-    {
-        name: 'Masha',
-        company: 'Facebook',
-        email: 'masha@gmail.com',
-        phone: '+375292929211',
-        balance: '$4,123',
-        isActive: true,
-        gender: 'male',
-    },
-    {
-        name: 'Ivan',
-        company: 'Yandex',
-        email: 'ivan@gmail.com',
-        phone: '+395292929341',
-        balance: '$2,123',
-        isActive: false,
-        gender: 'female',
-    },
-    {
-        name: 'Kate',
-        company: 'Microsoft',
-        email: 'kate@gmail.com',
-        phone: '+365292912346',
-        balance: '$10,123',
-        isActive: true,
-        gender: 'male',
-    },
-    {
-        name: 'Maksim',
-        company: 'Yahoo',
-        email: 'maksim@gmail.com',
-        phone: '+315292912326',
-        balance: '$5,773',
-        isActive: true,
-        gender: 'female',
-    },
-]
-
 export const initClients = () => {
     ROOT_NODE.innerHTML = template;
-    createClients(users);
-}
+    fetch('https://gist.githubusercontent.com/oDASCo/3f4014d24dc79e1e29b58bfa96afaa1b/raw/677516ee3bd278f7e3d805108596ca431d00b629/db.json')
+    .then((responce) =>{
+        return responce.json();
+    }).then(users => {
+        createClients(users);
+    });
+};

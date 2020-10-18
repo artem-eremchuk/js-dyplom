@@ -60,16 +60,11 @@ export const createClients = (users) => {
         return { countFamele, countMale };
     }
 
-    function returnBalanceNum(str){
-        let newStr = str.replace('$', '');
-        return Number(newStr.replace(',', '.'));
-    }
-
     function maxBalance(users){
-        let maxValue = 0;
+        let maxValue = '';
         for (let i = 0; i < users.length; i++){
-            if (maxValue < returnBalanceNum(users[i].balance)) {
-                maxValue = returnBalanceNum(users[i].balance);
+            if (maxValue < users[i].balance) {
+                maxValue = users[i].balance;
             } else {
                 maxValue = maxValue;
             }

@@ -5,19 +5,16 @@
 }
 
 .container {
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(/src/assets/img/bg-image.jpg);
-    background-position: top;
-    background-size: cover;
-    position: absolute;
+    width: 1200px;
+    margin: 0 auto;
 }
 
 .form-box {
     height: 500px;
     width: 380px;
     position: relative;
-    margin: 6% auto;
+    margin: 0 auto;
+    margin-top: 100px;
     background: #fff;
     padding: 5px;
     overflow: hidden;

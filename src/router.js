@@ -15,7 +15,7 @@ const router = () => {
     }
     else if (window.location.hash === '#/'){
         loginProtector((user) => {
-            ROOT_NODE.innerHTML = `<div>User ${user.name}</div>`;
+            ROOT_NODE.innerHTML = `<div class="user">Привет ${user.name}!</div>`;
         });
     }
     else {
@@ -24,6 +24,7 @@ const router = () => {
 }
 
 export const initRouter = () => {
+    window.location.hash = '/';
     window.addEventListener('hashchange', router);
     router();
 }
