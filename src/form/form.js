@@ -59,4 +59,3 @@ export const initForm = () => {
         toggleBtnRight.classList.remove('active');
     })
 }
-
