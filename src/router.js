@@ -2,20 +2,27 @@ import { initCalendar } from "./calendar/calendar";
 import { initClients } from "./clients/clients";
 import { ROOT_NODE } from "./constants";
 import { initForm } from "./form/form";
+import { menuActiveBtn, findOS, browser } from './helper';
 
 const router = () => {
     if (window.location.hash === '#/form'){
         initForm();
     } 
     else if (window.location.hash === '#/clients'){
-        loginProtector(initClients());
+        loginProtector(initClients);
     }
     else if (window.location.hash === '#/calendar'){
         initCalendar();
     }
     else if (window.location.hash === '#/'){
         loginProtector((user) => {
-            ROOT_NODE.innerHTML = `<div class="user">Привет ${user.name}!</div>`;
+            ROOT_NODE.innerHTML = `
+            <div class="user">
+                Добрый день ${user.name}!
+                <div class="info-user">Ваша OS ${findOS()}</div>
+                <div class="info-user">Ваш браузер ${browser}</div>
+            </div>
+            `;
         });
     }
     else {
@@ -36,4 +43,6 @@ export const loginProtector = (initFn) => {
     } else {
         window.location.hash = '/form';
     }
-}
+} 
+
+menuActiveBtn();

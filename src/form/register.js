@@ -1,4 +1,5 @@
 import {INVALID_CLASS} from '../constants.js';
+import { users } from '../constants';
 
 export function initRegister(){
     const registerForm = document.forms['register'];
@@ -100,6 +101,8 @@ export function initRegister(){
     registerForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const user = formHelper.getValue();
-        console.log(user);
+        users.push(user);
+        localStorage.setItem('user', JSON.stringify(user));
+        registerForm.reset();
     });  
 }

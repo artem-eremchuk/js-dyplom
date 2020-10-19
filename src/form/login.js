@@ -1,18 +1,4 @@
-const users = [{
-    name: 'Artem',
-    email: 'eremchuk.it@gmail.com',
-    password: 'qwerty',
-}, 
-{
-    name: 'Ivan',
-    email: 'ivan@gmail.com',
-    password: 'ivan',
-}, 
-{
-    name: 'Peret',
-    email: 'peter@gmail.com',
-    password: 'peter',
-}];
+import { users } from '../constants';
 
 export function initLogin(){
     const inputs = [...document.querySelectorAll('.input__email, .input__pw')];
@@ -60,7 +46,6 @@ export function initLogin(){
                 loginForm.elements['password'].value === item.password){
                 localStorage.setItem('user', JSON.stringify(item));
                 window.location.hash = '/';
-                console.log(`User: ${item.name}`);
                 loginForm.reset();
                 setButtonDisabled();
                 isUser = true;
